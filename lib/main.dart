@@ -4,7 +4,7 @@ import 'package:portfolio/wrapper/wrapper.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(Provider(create: (_) => AppTheme(), child: MyApp()));
+  runApp(ChangeNotifierProvider(create: (_) => AppTheme(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
