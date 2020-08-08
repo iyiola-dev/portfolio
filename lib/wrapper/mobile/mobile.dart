@@ -13,7 +13,7 @@ class Mobile extends StatelessWidget {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(28.0),
-        color: Colors.black.withOpacity(0.5),
+        color: Theme.of(context).backgroundColor,
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: SingleChildScrollView(
