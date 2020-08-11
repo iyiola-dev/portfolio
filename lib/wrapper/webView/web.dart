@@ -126,9 +126,10 @@ class Web extends StatelessWidget {
                                 width: 30,
                               ),
                               IconButton(
+                                color: Theme.of(context).primaryColorDark,
                                   icon: model.isDark
-                                      ? Icon(Icons.brightness_3)
-                                      : Icon(CupertinoIcons.brightness),
+                                      ? Icon(CupertinoIcons.brightness) // if dark, show a sun icon
+                                      : Icon(Icons.brightness_3), // if light, show a moon icon
                                   onPressed: () {
                                     model.toggleTheme();
                                   }),
