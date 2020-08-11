@@ -10,24 +10,22 @@ class AppTheme extends ChangeNotifier {
   bool get isDark => _isDark;
 
   void toggleTheme() {
-    _isDark = !_isDark;
     if (_isDark) {
       _appTheme = appthemelight;
-      notifyListeners();
     } else {
       _appTheme = appThemeDark;
-      notifyListeners();
     }
+    _isDark = !_isDark;
+    notifyListeners();
   }
 
   void setTheme() {
-    _isDark = isDark;
     if (isDark) {
       _appTheme = appThemeDark;
-      notifyListeners();
     } else {
       _appTheme = appthemelight;
-      notifyListeners();
     }
+    _isDark = isDark;
+    notifyListeners();
   }
 }
