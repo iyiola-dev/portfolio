@@ -12,7 +12,6 @@ class Web extends StatelessWidget {
     var model = Provider.of<AppTheme>(context);
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(0),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         color: Theme.of(context).backgroundColor,
@@ -33,8 +32,8 @@ class Web extends StatelessWidget {
 //the right flutter image
                     Container(
                       color: Theme.of(context).cardColor,
-                      width: 300,
-                      height: 700,
+                      width: Config.xMargin(context, 21),
+                      height: Config.yMargin(context, 100),
                     )
                     /*  Image.asset(
                       'images/rect.png',
@@ -85,7 +84,7 @@ class Web extends StatelessWidget {
                                     color: Theme.of(context).primaryColorDark),
                               ),
                               SizedBox(
-                                width: 50,
+                                width: Config.xMargin(context, 4),
                               ),
                               Text(
                                 "portfolio",
@@ -93,7 +92,7 @@ class Web extends StatelessWidget {
                                     color: Theme.of(context).primaryColorDark),
                               ),
                               SizedBox(
-                                width: 50,
+                                width: Config.xMargin(context, 4),
                               ),
                               Text(
                                 "Resume",
@@ -101,14 +100,15 @@ class Web extends StatelessWidget {
                                     color: Theme.of(context).primaryColorDark),
                               ),
                               SizedBox(
-                                width: 50,
+                                width: Config.xMargin(context, 4),
                               ),
                               GestureDetector(
                                 onTap: () {},
                                 child: Container(
-                                  width: 100,
+                                  width: Config.xMargin(context, 8),
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
+                                      borderRadius: BorderRadius.circular(
+                                          Config.xMargin(context, 8)),
                                       color: Theme.of(context).primaryColor),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -133,7 +133,7 @@ class Web extends StatelessWidget {
                                     model.toggleTheme();
                                   }),
                               SizedBox(
-                                width: 50,
+                                width: Config.xMargin(context, 4),
                               ),
                             ],
                           ),
@@ -148,7 +148,7 @@ class Web extends StatelessWidget {
                       child: Row(
                         children: [
                           SizedBox(
-                            width: 70,
+                            width: Config.xMargin(context, 5.6),
                           ),
                           Container(
                             child: Column(
@@ -158,7 +158,7 @@ class Web extends StatelessWidget {
                                   'Hello',
                                   style: GoogleFonts.roboto(
                                       textStyle: TextStyle(
-                                          fontSize: 34,
+                                          fontSize: Config.textSize(context, 3),
                                           color:
                                               Theme.of(context).accentColor)),
                                 ),
@@ -171,7 +171,8 @@ class Web extends StatelessWidget {
                                       "I'm Iyiola,",
                                       style: GoogleFonts.roboto(
                                           textStyle: TextStyle(
-                                              fontSize: 30,
+                                              fontSize:
+                                                  Config.textSize(context, 3),
                                               color: Theme.of(context)
                                                   .primaryColor)),
                                     ),
@@ -179,7 +180,8 @@ class Web extends StatelessWidget {
                                       " Mobile Developer",
                                       style: GoogleFonts.roboto(
                                           textStyle: TextStyle(
-                                              fontSize: 30,
+                                              fontSize:
+                                                  Config.textSize(context, 3),
                                               color: Theme.of(context)
                                                   .accentColor)),
                                     ),
@@ -192,7 +194,7 @@ class Web extends StatelessWidget {
                                   'I Turn Beautiful UI Into Mobile Apps',
                                   style: GoogleFonts.roboto(
                                       textStyle: TextStyle(
-                                          fontSize: 30,
+                                          fontSize: Config.textSize(context, 3),
                                           color: Theme.of(context)
                                               .primaryColorDark)),
                                 ),
@@ -222,18 +224,45 @@ class Web extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            width: 150,
+                            width: Config.xMargin(context, 4),
                           ),
                           Container(
-                            height: 400,
-                            width: 400,
+                            height: Config.yMargin(context, 50),
+                            width: Config.xMargin(context, 22),
+                            color: Theme.of(context).cursorColor,
+                            padding: EdgeInsets.only(bottom: 30, right: 10),
                             child: Container(
-                              padding: EdgeInsets.only(top: 20, right: 20),
                               child: Image.asset(
                                 'images/profile.jpg',
                                 fit: BoxFit.cover,
                               ),
                             ),
+                          ),
+                          SizedBox(
+                            width: 50,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Icon(
+                                FontAwesomeIcons.github,
+                                color: Theme.of(context).primaryColorDark,
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Icon(
+                                FontAwesomeIcons.twitter,
+                                color: Theme.of(context).primaryColorDark,
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Icon(
+                                FontAwesomeIcons.linkedin,
+                                color: Theme.of(context).primaryColorDark,
+                              ),
+                            ],
                           )
                         ],
                       ),

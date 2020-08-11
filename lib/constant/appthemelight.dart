@@ -5,6 +5,7 @@ ThemeData appthemelight = ThemeData(
     backgroundColor: Colors.white,
     primaryColorDark: Colors.black,
     primaryColorLight: Colors.white,
+    cursorColor: Colors.white,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     accentColor: Color(0xff0C1545),
     cardColor: Color.fromRGBO(242, 242, 242, 0.7));

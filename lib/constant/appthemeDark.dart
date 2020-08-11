@@ -7,4 +7,5 @@ ThemeData appThemeDark = ThemeData(
     primaryColorLight: Colors.black,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     accentColor: Colors.white,
+    cursorColor: Color(0xff0C1545),
     cardColor: Color(0xff080F30));
